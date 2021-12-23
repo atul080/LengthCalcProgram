@@ -46,7 +46,7 @@ public class LineComparison {
 			double y4=sc.nextDouble();
 
 			
-			
+			//calling function for length calculation
 			double firstLength=LineComparison.lengthCalc(x1, y1, x2, y2);
 			double secondLength=LineComparison.lengthCalc(x3, y3, x4, y4);
 
