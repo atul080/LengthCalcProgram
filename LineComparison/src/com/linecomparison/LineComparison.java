@@ -1,8 +1,8 @@
-package com.lineequality;
+package com.linecomparison;
 import java.util.*;
 import java.math.*;
 
-public class LineEquality {
+public class LineComparison {
 
 	//function for length calculation
 	public static double lengthCalc(double x1,double y1,double x2,double y2)
@@ -47,18 +47,20 @@ public class LineEquality {
 
 			
 			
-			double firstLength=LineEquality.lengthCalc(x1, y1, x2, y2);
-			double secondLength=LineEquality.lengthCalc(x3, y3, x4, y4);
+			double firstLength=LineComparison.lengthCalc(x1, y1, x2, y2);
+			double secondLength=LineComparison.lengthCalc(x3, y3, x4, y4);
 
 			
 			//checking equality
 			if(firstLength==secondLength)
 			{
-				System.out.print("Both the lengths are equal");
+				System.out.print("Both the lengths are equal.");
 			}
+			else if(firstLength<secondLength)
+				System.out.print("First line is smaller than Second line.");
 			else
-				System.out.print("Lengths are not equal");
-			
+				System.out.print("First line is greater than Second line.");
+
 			
 			
 	}
