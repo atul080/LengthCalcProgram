@@ -5,11 +5,10 @@ import java.math.*;
 public class LineComparison {
 
 	//function for length calculation
-	public static double lengthCalc(double x1,double y1,double x2,double y2)
+	public double lengthCalc(double x1,double y1,double x2,double y2)
 	{
 		//Calculating length
 		double ans=Math.sqrt(Math.pow((x2-x1),2) + Math.pow((y2-y1),2));
-		
 		return ans;
 	}
 
@@ -47,21 +46,26 @@ public class LineComparison {
 
 			
 			//calling function for length calculation
-			double firstLength=LineComparison.lengthCalc(x1, y1, x2, y2);
-			double secondLength=LineComparison.lengthCalc(x3, y3, x4, y4);
+			LineComparison lc = new LineComparison();
+			double firstLength=lc.lengthCalc(x1, y1, x2, y2);
+			double secondLength=lc.lengthCalc(x3, y3, x4, y4);
 
-			
+			String fLength= firstLength+"";
+			String sLength= secondLength+"";
+
+			System.out.println(fLength+"........."+sLength);
+
+
 			//checking equality
-			if(firstLength==secondLength)
+			int eq=fLength.compareTo(sLength);
+			if(eq==0)
 			{
 				System.out.print("Both the lengths are equal.");
 			}
-			else if(firstLength<secondLength)
+			else if(eq<0)
 				System.out.print("First line is smaller than Second line.");
 			else
 				System.out.print("First line is greater than Second line.");
-
-			
 			
 	}
 
